@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: getColour(light-grey);
+    color: getColour(dark-grey);
+    margin: 0;
+    font-family: $font-primary;
+}
