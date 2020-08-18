@@ -1,9 +1,5 @@
 nav {
     background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
 
     .container {
         @extend .container-flex;
@@ -25,12 +21,12 @@ nav {
         margin-left: 1.5em;
     }
 
-     a {
+    a {
         color: getColour(primary);
         text-decoration: none;
     }
-    
-    .active {
+
+    a.active {
         padding: 0.4em 0.4em 0.1em;
         border-bottom: 4px solid getColour(secondary);
     }

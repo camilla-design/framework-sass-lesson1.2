@@ -16,17 +16,45 @@ body {
   font-family: "open sans", sans-serif;
 }
 
-nav {
-  background: white;
+.wrapper {
+  flex: 1 0 auto;
+  padding-bottom: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.container-flex, nav .container, footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav .container {
+.grid {
+  display: grid;
+}
+
+.grid > div {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+nav {
+  background: white;
+}
+
+nav .container {
+  justify-content: start;
 }
 
 nav .logo {
@@ -49,8 +77,135 @@ nav a {
   text-decoration: none;
 }
 
-nav .active {
+nav a.active {
   padding: 0.4em 0.4em 0.1em;
   border-bottom: 4px solid #059f81;
+}
+
+h1 {
+  font-family: montserrat, sans-serif;
+  font-weight: normal;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    margin-top: 3rem;
+  }
+}
+
+p {
+  font-size: 0.9em;
+  text-align: left;
+}
+
+p.highlight {
+  color: #059f81;
+}
+
+.circle {
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+  width: 39px;
+  height: 39px;
+  border: 3px solid transparent;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.circle.one {
+  width: 116px;
+  height: 116px;
+  border-color: #e28413;
+}
+
+.circle.two {
+  width: 211px;
+  height: 211px;
+  border-color: #059f81;
+}
+
+.circle.three {
+  width: 268px;
+  height: 268px;
+  border-color: #000022;
+}
+
+.circle-container {
+  margin-top: 2.3rem;
+}
+
+.circle-container > div {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background: #059f81;
+  flex-shrink: 0;
+  color: white;
+  padding: 1.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+}
+
+footer .container {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  footer .container {
+    flex-direction: row;
+  }
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a a:hover {
+  color: #000022;
+}
+
+footer input {
+  border: none;
+  height: 25px;
+  padding: 0.3em;
+  width: 150px;
+}
+
+@media (min-width: 768px) {
+  footer input {
+    width: 225px;
+  }
+}
+
+footer button {
+  background: #036e59;
+  border: none;
+  height: 25px;
+  color: white;
+  width: 98px;
+}
+
+footer .terms {
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  footer .terms {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
